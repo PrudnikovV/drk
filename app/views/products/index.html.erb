@@ -1,0 +1,33 @@
+<h1>Продукти</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Найменування</th>
+      <th>Опис</th>
+      <th>Малюнок</th>
+      <th>Ціна</th>
+      <th>Вид</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.title %></td>
+        <td><%= product.description %></td>
+        <td><%= product.image_url %></td>
+        <td><%= product.price %></td>
+        <td><%= product.type_product %></td>
+        <td><%= link_to 'Показаты', product %></td>
+        <td><%= link_to 'Редагувати', edit_product_path(product), data: { 'no-turbolink'=>true}  %></td>
+        <td><%= link_to 'Знищити', product, method: :delete, data: { confirm: 'Підтвердіть?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Додати', new_product_path %>

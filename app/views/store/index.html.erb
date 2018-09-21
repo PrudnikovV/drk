@@ -1,0 +1,24 @@
+<h1>Наші продукти</h1>
+<table>
+
+<% @products.each do |product| %>
+<% if product.type_product == @prev_type_product then %>
+	<h1>Категорії: <%=product.type_product %></h1>
+<% end %>
+<% @prev_type_product = product.type_product %>
+<tr>
+	<td>
+
+		<div class="entry">
+			<%= image_tag(product.image_url) %>
+		</div>
+	</td>
+	<td>
+		<div class="entry">
+			<h3><%= product.title %></h3>
+			<h13><%= sanitize(product.description) %></h13>
+		</div>
+	</td>
+</tr>
+<% end %>
+</table>

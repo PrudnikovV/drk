@@ -1,0 +1,37 @@
+<%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Найменування %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :Опис %><br>
+    <%= f.cktext_area :description, rows: 10 %>
+  </div>
+  <div class="field">
+    <%= f.label :Картинка %><br>
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :Ціна %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :Тип %><br>
+    <%= f.text_field :type_product %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

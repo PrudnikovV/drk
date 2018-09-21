@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Доктор К Здоров'я, дароване природою</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class='<%= controller.controller_name %>'>
+ 
+	<div id="Top">
+		<ul>
+		<li>
+
+		<%= image_tag("top_logo.png") %>
+		</li>	
+		<li>
+			<%= link_to "Головна","/"%>
+		</li>
+		<li>
+			<%= link_to "Про нас","/about"%>
+		</li>
+		<li>
+			<%= link_to "Продукція","/store"%>
+		</li>
+		<li>
+			<%= link_to "Контакти","/contact"%>	
+		</li>
+		
+
+
+		</ul>
+	</div>
+	
+
+<div>
+<%= yield %>
+</div>
+<div>
+<center>
+	<%= image_tag("footer_image_2.png", class: "button_image")%>
+</center>
+</div>
+</body>
+</html>

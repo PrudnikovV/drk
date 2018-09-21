@@ -1,0 +1,33 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.home {
+	
+	h1 {
+	color: #05805B;
+	text-align: center;
+	font: 30px "Tahoma", serif;
+
+	}
+}
+.home_text {
+	text-align: left;
+	padding: 3%;
+	font: 18px "Tahoma", serif;
+}
+.home_down {
+	
+		table {
+	padding: 3%;
+	font: 18px "Tahoma", serif;
+	vertical-align: top;
+
+	tr td {
+		font: 14px "Tahoma", serif;
+		vertical-align: top;
+		padding: 1%;
+	}
+	}
+	
+}
